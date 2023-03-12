@@ -13,8 +13,19 @@
 	"author": "Randy Urriola",
 	"license": "ISC",
 	"devDependencies": {
+		"cssnano": "^4.1.10",
 		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-cache": "^1.1.3",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-postcss": "^9.0.0",
+		"gulp-plumber": "^1.2.1",
 		"gulp-sass": "^5.1.0",
-		"sass": "^1.59.2"
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-terser-js": "^5.2.2",
+		"gulp-webp": "^4.0.1",
+		"sass": "^1.59.2",
+		"terser": "^5.3.8"
 	}
 }
