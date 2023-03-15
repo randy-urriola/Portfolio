@@ -1,0 +1,87 @@
+.style-switcher {
+	position: fixed;
+	right: 0;
+	top: 6rem;
+	padding: 1.5rem;
+	width: 20rem;
+	border: 1px solid var(--bg-black-50);
+	background: var(--bg-black-100);
+	z-index: 101;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease;
+	transform: translateX(100%);
+
+	&.open {
+		transform: translateX(-2.5rem);
+	}
+
+	.s-icon {
+		position: absolute;
+		height: 4rem;
+		width: 4rem;
+		text-align: center;
+		font-size: 2rem;
+		background: var(--bg-black-100);
+		color: var(--text-black-900);
+		right: 100%;
+		border: 1px solid var(--bg-black-50);
+		margin-right: 2.5rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border-radius: 50%;
+
+		i {
+			line-height: 4rem;
+		}
+	}
+
+	.style-switcher-toggler {
+		top: 0;
+	}
+
+	.day-night {
+		top: 5.5rem;
+	}
+
+	h4 {
+		margin: 0 0 1rem;
+		color: var(--text-black-700);
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	.colors {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		cursor: pointer;
+
+		span {
+			display: inline-block;
+			height: 3rem;
+			width: 3rem;
+			border-radius: 50%;
+		}
+	}
+
+	.color-1 {
+		background: #ec1839;
+	}
+
+	.color-2 {
+		background: #fa5b0f;
+	}
+
+	.color-3 {
+		background: #37b182;
+	}
+
+	.color-4 {
+		background: #1854b4;
+	}
+
+	.color-5 {
+		background: #f021b2;
+	}
+}

@@ -743,27 +743,32 @@ h3.my-profession {
 }
 
 /* portfolio */
+/* * Integrado */
 .portfolio .container {
 	padding-bottom: 4rem;
 }
 
+/* * Integrado */
 .portfolio .portfolio-heading {
 	flex: 0 0 100%;
 	max-width: 100%;
 	margin-bottom: 4rem;
 }
 
+/* * Integrado */
 .portfolio .portfolio-heading h2 {
 	color: var(--text-black-900);
 	font-weight: 500;
 }
 
+/* * Integrado */
 .portfolio .portfolio-item {
 	flex: 0 0 33.33%;
 	max-width: 33.33%;
 	margin-bottom: 3rem;
 }
 
+/* * Integrado */
 .portfolio .portfolio-item-inner {
 	border: 0.6rem solid var(--bg-black-100);
 	border-radius: 1rem;
@@ -771,12 +776,14 @@ h3.my-profession {
 	cursor: pointer;
 }
 
+/* * Integrado */
 .portfolio .portfolio-item-inner .portfolio-img img {
 	width: 100%;
 	display: block;
 }
 
 /* Contact */
+/* * Integrado */
 .contact-title {
 	color: var(--skin-color);
 	text-align: center;
@@ -784,6 +791,7 @@ h3.my-profession {
 	margin-bottom: 2rem;
 }
 
+/* * Integrado */
 .contact-sub-title {
 	color: var(--text-black-900);
 	text-align: center;
@@ -791,6 +799,7 @@ h3.my-profession {
 	margin-bottom: 6rem;
 }
 
+/* * Integrado */
 .contact .contact-info-item {
 	flex: 0 0 25%;
 	max-width: 25%;
@@ -798,15 +807,18 @@ h3.my-profession {
 	margin-bottom: 6rem;
 }
 
+/* * Integrado */
 .contact .contact-info-item .icon {
 	display: inline-block;
 }
 
+/* * Integrado */
 .contact .contact-info-item .icon .fa {
 	font-size: 2.5rem;
 	color: var(--skin-color);
 }
 
+/* * Integrado */
 .contact .contact-info-item h4 {
 	font-size: 1.8rem;
 	font-weight: 700;
@@ -815,6 +827,7 @@ h3.my-profession {
 	margin: 1.5rem 0 0.5rem;
 }
 
+/* * Integrado */
 .contact .contact-info-item p {
 	font-size: 1.6rem;
 	line-height: 2.5rem;
@@ -822,25 +835,30 @@ h3.my-profession {
 	font-weight: 400;
 }
 
+/* * Integrado */
 .contact .contact-form {
 	flex: 0 0 100%;
 	max-width: 100%;
 }
 
+/* * Integrado */
 .contact .contact-form .col-6 {
 	flex: 0 0 50%;
 	max-width: 50%;
 }
 
+/* * Integrado */
 .contact .contact-form .col-12 {
 	flex: 0 0 100%;
 	max-width: 100%;
 }
 
+/* * Integrado */
 .contact .contact-form .form-item {
 	margin-bottom: 3rem;
 }
 
+/* * Integrado */
 .contact .contact-form .form-item .form-control {
 	width: 100%;
 	height: 5rem;
@@ -853,19 +871,23 @@ h3.my-profession {
 	transition: all 0.3s ease;
 }
 
+/* * Integrado */
 .contact .contact-form .form-item .form-control:focus {
 	box-shadow: 0 0 2rem rgba(48, 46, 77, 0.15);
 }
 
+/* * Integrado */
 .contact .contact-form .form-item textarea.form-control {
 	height: 14rem;
 }
 
+/* * Integrado */
 .contact .contact-form .btn {
 	height: 5rem;
 	padding: 0 5rem;
 }
 
+/* * ALL RESPONSIVE IS Integrado */
 /* Respinsive */
 @media (max-width: 1199px) {
 	.section .container {
