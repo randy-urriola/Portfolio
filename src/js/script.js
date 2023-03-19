@@ -80,3 +80,27 @@ function asideSectionTogglerBtn() {
 		allSection[i].classList.toggle('open');
 	}
 }
+
+/* Portafolio popup */
+document.addEventListener('click', (e) => {
+	if (e.target.classList.contains('boton__item')) {
+		togglePortfolioPopup();
+		portfolioItemDetails(e.target.parentElement);
+	}
+});
+
+function togglePortfolioPopup() {
+	document.querySelector('.portfolio__popup').classList.toggle('open');
+}
+document
+	.querySelector('.portfolio__popup-close')
+	.addEventListener('click', togglePortfolioPopup);
+
+function portfolioItemDetails(portfolioItem) {
+	document.querySelector('.pp__thumbnail img').src =
+		portfolioItem.querySelector('.work__img').src;
+	document.querySelector('.subtitle span').innerHTML =
+		portfolioItem.querySelector('.title__item').innerHTML;
+	document.querySelector('.portfolio__body').innerHTML =
+		portfolioItem.querySelector('.portfolio-details').innerHTML;
+}
