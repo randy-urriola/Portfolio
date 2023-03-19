@@ -118,10 +118,11 @@
 	}
 
 	.nav {
-		margin-top: 5rem;
+		position: fixed;
+		top: auto;
 
 		li {
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			display: block;
 
 			a {

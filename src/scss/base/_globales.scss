@@ -147,6 +147,7 @@ ul {
 	color: white;
 	border-radius: 4rem;
 	display: inline-block;
+	left: 10rem;
 	white-space: nowrap;
 	border: none;
 	background: var(--skin-color);
@@ -159,6 +160,26 @@ ul {
 
 .shadow-dark {
 	box-shadow: 0 0 2rem rgba(48, 46, 77, 0.15);
+}
+
+body.dark {
+	.shadow-dark {
+		box-shadow: 0 0 2rem rgba(166, 247, 223, 0.123);
+	}
+
+	.contact .contact-form .form-item .form-control {
+		border: none;
+		&:focus {
+			box-shadow: 0 0 2rem rgba(166, 247, 223, 0.123);
+		}
+	}
+
+	.service .service-item .service-item-inner {
+		border: none;
+		&:hover {
+			box-shadow: 0 0 2rem rgba(166, 247, 223, 0.123);
+		}
+	}
 }
 
 h3.hello {

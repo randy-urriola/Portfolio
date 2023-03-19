@@ -27,7 +27,7 @@
 			width: 8rem;
 			border-bottom: 1rem solid var(--skin-color);
 			border-right: 1rem solid var(--skin-color);
-			right: 2rem;
+			right: 0.6rem;
 			bottom: -4rem;
 		}
 
@@ -38,14 +38,14 @@
 			width: 8rem;
 			border-top: 1rem solid var(--skin-color);
 			border-left: 1rem solid var(--skin-color);
-			left: -2rem;
+			left: 0.6rem;
 			top: -4rem;
 		}
 
 		img {
 			margin: auto;
 			border-radius: 0.5rem;
-			height: 40rem;
+			height: 40rem; //
 		}
 	}
 }

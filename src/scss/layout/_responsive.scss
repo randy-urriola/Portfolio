@@ -1,4 +1,5 @@
 @media (max-width: 1199px) {
+	// Tablet
 	.section {
 		left: 0;
 
@@ -9,6 +10,10 @@
 		&.open {
 			left: 27rem;
 		}
+	}
+
+	.row {
+		margin-right: 0;
 	}
 
 	.aside {
@@ -35,6 +40,7 @@
 }
 
 @media (max-width: 991px) {
+	// IPad
 	.contact .contact-info-item,
 	.portfolio .portfolio-item,
 	.service .service-item {
@@ -43,18 +49,54 @@
 	}
 
 	.home {
+		&.section.open {
+			left: 0;
+
+			.btn {
+				display: flex;
+				position: fixed;
+				left: 30rem;
+			}
+		}
+
+		.row {
+			justify-content: center;
+			align-items: center;
+			gap: 4rem;
+			flex-direction: column-reverse;
+		}
+
 		.home-info {
 			flex: 0 0 100%;
 			max-width: 100%;
 		}
 
 		.home-img {
-			display: none;
+			&::after {
+				right: -2.4rem;
+				bottom: -4rem;
+			}
+
+			&::before {
+				left: -2.4rem;
+				top: -4rem;
+			}
+
+			&::after,
+			&::before {
+				height: 6rem;
+				width: 6rem;
+			}
+
+			img {
+				height: 30rem;
+			}
 		}
 	}
 }
 
 @media (max-width: 767px) {
+	//Celulares
 	.contact .contact-form .col-6,
 	.contact .contact-info-item,
 	.portfolio .portfolio-item,
@@ -65,5 +107,52 @@
 	.about .about-content .personal-info {
 		flex: 0 0 100%;
 		max-width: 100%;
+	}
+
+	.section.open {
+		left: 0;
+		direction: unset;
+	}
+
+	.aside {
+		width: 24rem;
+
+		.nav-toggler.open {
+			left: 27rem;
+		}
+	}
+
+	.home {
+		.home-img {
+			&::after {
+				right: -7.2rem;
+				bottom: -3rem;
+
+				border-bottom: 0.8rem solid var(--skin-color);
+				border-right: 0.8rem solid var(--skin-color);
+			}
+
+			&::before {
+				// 	left: -2.4rem;
+				// 	top: -4rem;
+				border-top: 0.8rem solid var(--skin-color);
+				border-left: 0.8rem solid var(--skin-color);
+			}
+
+			&::after,
+			&::before {
+				height: 6rem;
+				width: 6rem;
+			}
+
+			img {
+				height: 22rem;
+			}
+		}
+	}
+
+	.btn {
+		display: block;
+		text-align: center;
 	}
 }
