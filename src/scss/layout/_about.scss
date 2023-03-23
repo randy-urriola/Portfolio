@@ -1,3 +1,5 @@
+@use 'base/variables' as v;
+
 .about {
 	.about-content {
 		flex: 0 0 100%;
@@ -8,7 +10,7 @@
 			max-width: 100%;
 
 			h3 {
-				font-size: 2.4rem;
+				font-size: v.$title;
 				margin-bottom: 1.5rem;
 				font-weight: 700;
 				color: var(--text-black-900);
@@ -19,7 +21,7 @@
 			}
 
 			p {
-				font-size: 1.6rem;
+				font-size: v.$normal;
 				min-height: 2.5rem;
 				color: var(--text-black-700);
 			}
@@ -37,7 +39,7 @@
 				p {
 					font-weight: 600;
 					padding: 1rem 0;
-					font-size: 1.6rem;
+					font-size: v.$normal;
 					color: var(--text-black-900);
 					border-bottom: 0.1rem solid var(--bg-black-50);
 
@@ -72,7 +74,7 @@
 				h5 {
 					line-height: 4rem;
 					font-weight: 600;
-					font-size: 1.6rem;
+					font-size: v.$normal;
 					color: var(--text-black-900);
 					text-transform: capitalize;
 				}
@@ -96,6 +98,7 @@
 
 				.skill-percent {
 					position: absolute;
+					font-size: v.$normal;
 					right: 0;
 					color: var(--text-black-900);
 					top: -4rem;
@@ -112,7 +115,7 @@
 		}
 
 		h3.title {
-			font-size: 2.4rem;
+			font-size: v.$title;
 			margin-bottom: 3rem;
 			font-weight: 700;
 			color: var(--text-black-900);
@@ -182,7 +185,7 @@
 
 			.timeline-text {
 				line-height: 2.5rem;
-				font-size: 1.6rem;
+				font-size: v.$normal;
 				text-align: justify;
 				color: var(--text-black-700);
 			}

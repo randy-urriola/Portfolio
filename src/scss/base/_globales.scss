@@ -1,5 +1,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+@use 'base/variables' as v;
+
 h1 {
 	color: red;
 	font-size: 20px;
@@ -104,7 +106,7 @@ ul {
 	margin-bottom: 6rem;
 
 	h2 {
-		font-size: 4rem;
+		font-size: v.$general-title;
 		color: var(--text-black-900);
 		font-weight: 700;
 		position: relative;
@@ -141,7 +143,7 @@ ul {
 }
 
 .btn {
-	font-size: 1.6rem;
+	font-size: v.$normal;
 	font-weight: 500;
 	padding: 1.2rem 3.5rem;
 	color: white;

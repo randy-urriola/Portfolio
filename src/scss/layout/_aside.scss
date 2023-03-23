@@ -1,3 +1,5 @@
+@use 'base/variables' as v;
+
 .aside {
 	width: 27rem;
 	background: var(--bg-black-100);
@@ -126,7 +128,7 @@
 			display: block;
 
 			a {
-				font-size: 1.6rem;
+				font-size: v.$normal;
 				font-weight: 600;
 				display: block;
 				border-bottom: 0.1rem solid var(--bg-black-50);

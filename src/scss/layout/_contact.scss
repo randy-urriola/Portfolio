@@ -1,14 +1,16 @@
+@use 'base/variables' as v;
+
 .contact-title {
 	color: var(--skin-color);
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: v.$title;
 	margin-bottom: 2rem;
 }
 
 .contact-sub-title {
 	color: var(--text-black-900);
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: v.$normal;
 	margin-bottom: 6rem;
 }
 
@@ -29,7 +31,7 @@
 		}
 
 		h4 {
-			font-size: 1.8rem;
+			font-size: 1.7rem;
 			font-weight: 700;
 			color: var(--text-black-900);
 			text-transform: capitalize;
@@ -37,7 +39,7 @@
 		}
 
 		p {
-			font-size: 1.6rem;
+			font-size: v.$normal;
 			line-height: 2.5rem;
 			color: var(--text-black-700);
 			font-weight: 400;
@@ -61,14 +63,19 @@
 		.form-item {
 			margin-bottom: 3rem;
 
+			.label-form {
+				font-size: v.$normal;
+			}
+
 			.form-control {
 				width: 100%;
 				height: 5rem;
-				border-radius: 2.5rem;
+				border-radius: 1rem;
 				background: var(--bg-black-100);
 				border: 0.1rem solid var(--bg-black-50);
 				padding: 1rem 2.5rem;
-				font-size: 1.6rem;
+				margin-top: 0.7rem;
+				font-size: v.$normal;
 				color: var(--text-black-700);
 				transition: all 0.3s ease;
 
