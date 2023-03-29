@@ -104,3 +104,33 @@ function portfolioItemDetails(portfolioItem) {
 	document.querySelector('.portfolio__body').innerHTML =
 		portfolioItem.querySelector('.portfolio-details').innerHTML;
 }
+
+/* TODO: Crear una funcion para los elementos */
+document.addEventListener('mouseover', (e) => {
+	// if (e.target.classList.contains('pruebas')) {
+	if (e.target.classList.contains('fa-html5')) {
+		console.log('html');
+	}
+	if (e.target.classList.contains('fa-css3-alt')) {
+		console.log('css');
+	}
+	if (e.target.classList.contains('fa-square-js')) {
+		console.log('js');
+	}
+	if (e.target.classList.contains('fa-gulp')) {
+		console.log('gulp');
+	}
+	if (e.target.classList.contains('fa-php')) {
+		console.log('php');
+	}
+	if (e.target.classList.contains('fa-database')) {
+		console.log('bd');
+	}
+	// console.log(e.target.classList);
+	if (e.target.classList.contains('fa-sass')) {
+		const der = document.createElement('p');
+		der.textContent = 'SASS';
+		e.target.appendChild(der);
+	}
+	// }
+});

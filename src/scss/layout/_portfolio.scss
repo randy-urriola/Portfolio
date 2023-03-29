@@ -51,9 +51,24 @@
 			}
 		}
 
-		.boton__item:hover .boton__item--icon {
-			transform: translateX(0.4rem);
-			color: var(--skin-color);
+		.boton__item:hover {
+			.boton__item--icon,
+			&.text__item {
+				color: var(--skin-color);
+			}
+			.boton__item--icon,
+			.text__item {
+				transform: translateX(0.4rem);
+			}
+		}
+
+		.tech {
+			display: flex;
+			justify-content: space-evenly;
+			color: var(--text-black-900);
+			font-weight: 600;
+			font-size: 2rem;
+			margin: 1.2rem 0;
 		}
 	}
 
