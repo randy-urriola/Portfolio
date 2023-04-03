@@ -107,30 +107,46 @@ function portfolioItemDetails(portfolioItem) {
 
 /* TODO: Crear una funcion para los elementos */
 document.addEventListener('mouseover', (e) => {
-	// if (e.target.classList.contains('pruebas')) {
 	if (e.target.classList.contains('fa-html5')) {
-		console.log('html');
+		crear('HTML', e.target);
 	}
 	if (e.target.classList.contains('fa-css3-alt')) {
-		console.log('css');
+		crear('CSS', e.target);
 	}
 	if (e.target.classList.contains('fa-square-js')) {
-		console.log('js');
+		crear('JavaScript', e.target);
 	}
 	if (e.target.classList.contains('fa-gulp')) {
-		console.log('gulp');
+		crear('Gulp', e.target);
 	}
 	if (e.target.classList.contains('fa-php')) {
-		console.log('php');
+		crear('PHP', e.target);
 	}
 	if (e.target.classList.contains('fa-database')) {
-		console.log('bd');
+		crear('MySQL', e.target);
 	}
-	// console.log(e.target.classList);
 	if (e.target.classList.contains('fa-sass')) {
-		const der = document.createElement('p');
-		der.textContent = 'SASS';
-		e.target.appendChild(der);
+		crear('SASS', e.target);
 	}
-	// }
 });
+
+function crear(nombre, elemento) {
+	clear();
+	const cuadro = document.createElement('p');
+	cuadro.textContent = nombre;
+	console.log(nombre);
+	cuadro.classList.add('eliminar', 'ventana', 'shadow-dark');
+	elemento.appendChild(cuadro);
+
+	document.addEventListener('mouseout', function () {
+		setTimeout(() => {
+			cuadro.remove();
+		}, 1000);
+	});
+}
+
+function clear() {
+	if (document.querySelector('.eliminar')) {
+		document.querySelector('.eliminar').remove();
+	}
+}
