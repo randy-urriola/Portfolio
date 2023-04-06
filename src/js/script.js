@@ -1,6 +1,11 @@
 /* Typing animation */
 var typed = new Typed('.typing', {
-	strings: ['Web Developer', 'Frontend Developer', 'Backend Developer', 'Programer'],
+	strings: [
+		'Desarrollador Web',
+		'Desarrollador Front-end',
+		'Desarrollador Back-end',
+		'Programador',
+	],
 	typeSpeed: 100,
 	backSpeed: 60,
 	backDelay: 1000,
@@ -60,8 +65,7 @@ function updateNav(element) {
 }
 
 document.querySelector('.hire-me').addEventListener('click', function () {
-	const sectionIndex = this.getAttribute('data-section-index');
-	// console.log(sectionIndex);
+	const sectionIndex = 1;
 	showSection(this);
 	updateNav(this);
 	removeBackSection();
@@ -106,6 +110,10 @@ function portfolioItemDetails(portfolioItem) {
 }
 
 /* TODO: Crear una funcion para los elementos */
+// const techno = document.getElementById('tech');
+// if (techno) {
+// 	techno.addEventListener
+// }
 document.addEventListener('mouseover', (e) => {
 	if (e.target.classList.contains('fa-html5')) {
 		crear('HTML', e.target);

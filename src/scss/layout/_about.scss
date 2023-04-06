@@ -183,11 +183,16 @@
 				color: var(--text-black-900);
 			}
 
-			.timeline-text {
+			.timeline-text,
+			li {
 				line-height: 2.5rem;
 				font-size: v.$normal;
 				text-align: justify;
 				color: var(--text-black-700);
+			}
+
+			li {
+				margin-top: 0.7rem;
 			}
 		}
 	}
