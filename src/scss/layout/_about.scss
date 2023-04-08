@@ -39,6 +39,7 @@
 				p {
 					font-weight: 600;
 					padding: 1rem 0;
+					overflow-wrap: anywhere;
 					font-size: v.$normal;
 					color: var(--text-black-900);
 					border-bottom: 0.1rem solid var(--bg-black-50);
@@ -180,6 +181,7 @@
 				font-size: 1.8rem;
 				margin-bottom: 1.5rem;
 				text-transform: capitalize;
+				overflow-wrap: anywhere;
 				color: var(--text-black-900);
 			}
 
@@ -189,6 +191,7 @@
 				font-size: v.$normal;
 				text-align: justify;
 				color: var(--text-black-700);
+				overflow-wrap: anywhere;
 			}
 
 			li {

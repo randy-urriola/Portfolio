@@ -95,6 +95,9 @@ document.addEventListener('click', (e) => {
 
 function togglePortfolioPopup() {
 	document.querySelector('.portfolio__popup').classList.toggle('open');
+	document.addEventListener('scroll', function (e) {
+		e.preventDefault();
+	});
 }
 document
 	.querySelector('.portfolio__popup-close')
@@ -139,10 +142,9 @@ document.addEventListener('mouseover', (e) => {
 });
 
 function crear(nombre, elemento) {
-	clear();
+	clearTech();
 	const cuadro = document.createElement('p');
 	cuadro.textContent = nombre;
-	console.log(nombre);
 	cuadro.classList.add('eliminar', 'ventana', 'shadow-dark');
 	elemento.appendChild(cuadro);
 
@@ -153,8 +155,84 @@ function crear(nombre, elemento) {
 	});
 }
 
-function clear() {
+function clearTech() {
 	if (document.querySelector('.eliminar')) {
 		document.querySelector('.eliminar').remove();
 	}
+}
+
+function clear(referencia) {
+	const limpiar = referencia.querySelector('.eliminar');
+	if (limpiar) {
+		limpiar.remove();
+	}
+}
+
+/* Funcionamiento del formulario */
+const email = {
+	email: '',
+	asunto: '',
+	mensaje: '',
+};
+const inputEmail = document.getElementById('email');
+const inputSubject = document.getElementById('asunto');
+const inputMensaje = document.getElementById('mensaje');
+const formulario = document.getElementById('formulario');
+const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+
+inputEmail.addEventListener('blur', validar);
+inputSubject.addEventListener('blur', validar);
+inputMensaje.addEventListener('blur', validar);
+
+function validar(e) {
+	if (e.target.value.trim() === '') {
+		mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
+		email[e.target.name] = '';
+		comprobarEmail();
+		return;
+	}
+
+	if (e.target.id === 'email' && !validarEmail(e.target.value)) {
+		mostrarAlerta('El email no es válido', e.target.parentElement);
+		email[e.target.name] = '';
+		if (e.target.value === '') {
+			clear(e.target.parentElement);
+		}
+
+		comprobarEmail();
+		return;
+	}
+
+	clear(e.target.parentElement);
+
+	// Asignar los valores
+	email[e.target.name] = e.target.value.trim().toLowerCase();
+
+	// Comprobar el objeto de email
+	comprobarEmail();
+}
+
+function mostrarAlerta(mensaje, referencia) {
+	clear(referencia);
+	const alerta = document.createElement('p');
+	alerta.textContent = mensaje;
+	alerta.classList.add('eliminar', 'alerta', 'shadow-dark');
+	referencia.appendChild(alerta);
+}
+
+function validarEmail(email) {
+	const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+	const resultado = regex.test(email);
+	return resultado;
+}
+
+function comprobarEmail() {
+	console.log(email);
+	if (Object.values(email).includes('')) {
+		btnSubmit.classList.add('disabled');
+		btnSubmit.disabled = true;
+		return;
+	}
+	btnSubmit.classList.remove('disabled');
+	btnSubmit.disabled = false;
 }

@@ -38,7 +38,8 @@
 			font-size: 1.6rem;
 		}
 
-		.boton__item {
+		.boton__item,
+		.demo {
 			cursor: pointer;
 			color: var(--text-black-900);
 			font-weight: 700;
@@ -51,12 +52,15 @@
 			}
 		}
 
-		.boton__item:hover {
+		.boton__item:hover,
+		.demo:hover {
 			.boton__item--icon,
+			.demo--icon,
 			&.text__item {
 				color: var(--skin-color);
 			}
 			.boton__item--icon,
+			.demo--icon,
 			.text__item {
 				transform: translateX(0.4rem);
 			}
@@ -69,6 +73,9 @@
 			font-weight: 600;
 			font-size: 2rem;
 			margin: 1.2rem 0;
+			padding: 1.2rem 0;
+			border-top: 1px solid var(--bg-black-50);
+			border-bottom: 1px solid var(--bg-black-50);
 
 			i:hover {
 				color: var(--skin-color);
@@ -128,11 +135,12 @@
 		&.open {
 			opacity: 1;
 			visibility: visible;
+			left: 27rem;
 		}
 
 		&-inner {
 			background-color: var(--bg-black-100);
-			width: 70rem;
+			width: 90rem;
 			border-radius: 0.5rem;
 			padding: 2.5rem;
 			position: relative;

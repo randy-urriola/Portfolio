@@ -21,6 +21,14 @@
 		}
 	}
 
+	.portfolio {
+		.portfolio__popup {
+			&.open {
+				left: 0;
+			}
+		}
+	}
+
 	.row {
 		margin-right: 0;
 	}
@@ -194,6 +202,13 @@
 
 			img {
 				margin-bottom: 0.6rem;
+			}
+		}
+
+		.portfolio__popup {
+			&-close {
+				top: 0.5rem;
+				left: 1.5rem;
 			}
 		}
 	}
