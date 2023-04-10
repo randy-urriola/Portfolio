@@ -112,11 +112,7 @@ function portfolioItemDetails(portfolioItem) {
 		portfolioItem.querySelector('.portfolio-details').innerHTML;
 }
 
-/* TODO: Crear una funcion para los elementos */
-// const techno = document.getElementById('tech');
-// if (techno) {
-// 	techno.addEventListener
-// }
+/* Hover de las tecnologías en el portfolio section */
 document.addEventListener('mouseover', (e) => {
 	if (e.target.classList.contains('fa-html5')) {
 		crear('HTML', e.target);

@@ -1,12 +1,12 @@
-const toggleColors = document.getElementById('toggle-colors');
-const rootStyles = document.documentElement.style;
-
 /* Toggle Style Switcher */
 const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
 styleSwitcherToggle.addEventListener('click', () => {
 	document.querySelector('.style-switcher').classList.toggle('open');
 });
 
+/* Theme Colors */
+const toggleColors = document.getElementById('toggle-colors');
+const rootStyles = document.documentElement.style;
 toggleColors.addEventListener('click', (e) => {
 	rootStyles.setProperty('--skin-color', e.target.dataset.color);
 });
@@ -17,19 +17,6 @@ window.addEventListener('scroll', () => {
 		document.querySelector('.style-switcher').classList.remove('open');
 	}
 });
-
-/* Theme Colors */
-// const alternateStyles = document.querySelectorAll('.alternate-style');
-
-// function setActiveStyle(color) {
-// 	alternateStyles.forEach((style) => {
-// 		if (color === style.getAttribute('title')) {
-// 			style.removeAttribute('disabled');
-// 		} else {
-// 			style.setAttribute('disabled', 'true');
-// 		}
-// 	});
-// }
 
 /* Theme and Dark Mode */
 const dayNight = document.querySelector('.day-night');
