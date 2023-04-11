@@ -6,11 +6,13 @@
 	.home-info {
 		flex: 0 0 60%;
 		max-width: 60%;
+		transition: all 0.3s ease;
 
 		p {
 			margin-bottom: 7rem;
 			font-size: 1.8rem;
 			color: var(--text-black-700);
+			transition: all 0.3s ease;
 		}
 	}
 

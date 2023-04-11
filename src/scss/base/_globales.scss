@@ -211,6 +211,7 @@ h3.hello span {
 
 h3.my-profession {
 	font-size: 3rem;
+	// font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
 	margin: 1.5rem 0;
 }
 
