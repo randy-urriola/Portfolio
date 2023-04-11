@@ -99,9 +99,7 @@ function togglePortfolioPopup() {
 		e.preventDefault();
 	});
 }
-document
-	.querySelector('.portfolio__popup-close')
-	.addEventListener('click', togglePortfolioPopup);
+document.querySelector('.close-popup').addEventListener('click', togglePortfolioPopup);
 
 function portfolioItemDetails(portfolioItem) {
 	document.querySelector('.pp__thumbnail img').src =
