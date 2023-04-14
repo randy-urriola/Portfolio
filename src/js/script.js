@@ -1,10 +1,11 @@
 /* Typing animation */
 var typed = new Typed('.typing', {
 	strings: [
-		'Desarrollador Web',
-		'Desarrollador Front-end',
-		'Desarrollador Back-end',
-		'Programador',
+		'Web Developer',
+		'Front-end Developer',
+		'Back-end Developer',
+		'Programmer',
+		' ',
 	],
 	typeSpeed: 100,
 	backSpeed: 60,
@@ -165,12 +166,12 @@ function clear(referencia) {
 /* Funcionamiento del formulario */
 const email = {
 	email: '',
-	asunto: '',
-	mensaje: '',
+	subject: '',
+	message: '',
 };
 const inputEmail = document.getElementById('email');
-const inputSubject = document.getElementById('asunto');
-const inputMensaje = document.getElementById('mensaje');
+const inputSubject = document.getElementById('subject');
+const inputMensaje = document.getElementById('message');
 const formulario = document.getElementById('formulario');
 const btnSubmit = document.querySelector('#formulario button[type="submit"]');
 
@@ -180,14 +181,14 @@ inputMensaje.addEventListener('blur', validar);
 
 function validar(e) {
 	if (e.target.value.trim() === '') {
-		mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
+		mostrarAlerta(`The ${e.target.id} is required`, e.target.parentElement);
 		email[e.target.name] = '';
 		comprobarEmail();
 		return;
 	}
 
 	if (e.target.id === 'email' && !validarEmail(e.target.value)) {
-		mostrarAlerta('El email no es válido', e.target.parentElement);
+		mostrarAlerta('The email is incorrect', e.target.parentElement);
 		email[e.target.name] = '';
 		if (e.target.value === '') {
 			clear(e.target.parentElement);
